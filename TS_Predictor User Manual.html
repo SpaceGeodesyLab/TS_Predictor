@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TS_Predictor User Manual</title>
+    <style>
+        /* 全局样式：匹配Word默认排版 */
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 12pt;
+            line-height: 1.5;
+            margin: 2cm;
+        }
+        /* 标题层级样式 */
+        h1 {
+            font-size: 16pt;
+            font-weight: bold;
+            margin-top: 24pt;
+            margin-bottom: 12pt;
+            page-break-after: avoid;
+        }
+        h2 {
+            font-size: 14pt;
+            font-weight: bold;
+            margin-top: 18pt;
+            margin-bottom: 10pt;
+        }
+        h3 {
+            font-size: 12pt;
+            font-weight: bold;
+            margin-top: 14pt;
+            margin-bottom: 8pt;
+        }
+        /* 文档版本信息 */
+        .doc-info {
+            font-size: 12pt;
+            margin-bottom: 20pt;
+            line-height: 1.8;
+        }
+        /* 表格样式：匹配Word专业表格 */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 10pt 0;
+        }
+        table th, table td {
+            border: 1pt solid #000;
+            padding: 6pt;
+            text-align: left;
+            vertical-align: top;
+        }
+        table th {
+            font-weight: bold;
+            background-color: #f2f2f2;
+        }
+        /* 列表样式 */
+        ul, ol {
+            margin: 8pt 0 8pt 24pt;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 6pt;
+        }
+        /* 强调文本 */
+        strong {
+            font-weight: bold;
+        }
+        /* 链接样式 */
+        a {
+            color: #0066cc;
+            text-decoration: underline;
+        }
+        /* 分隔线 */
+        hr {
+            border: none;
+            border-top: 1pt solid #ccc;
+            margin: 16pt 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 文档标题与版本信息 -->
+    <h1 style="text-align: center; font-size: 18pt;">TS_Predictor User Manual</h1>
+    <div class="doc-info" style="text-align: right;">
+        <strong>Document Version</strong>: 1.0<br>
+        <strong>Email</strong>:  6720230184@mail.jxust.edu.cn<br>
+        <strong>Release Date</strong>: May 21, 2024
+    </div>
+
+    <!-- 1. Introduction -->
+    <h1>1. Introduction</h1>
+    <h2>1.1 Software Overview</h2>
+    <p>TS_Predictor is a professional tool for GNSS time series analysis and prediction. The software integrates five core modules: <strong>data processing, preprocessing, signal decomposition, nonlinear modeling and prediction, and model evaluation</strong>, providing users with an all-in-one solution from data input to result analysis.</p>
+    <p>TS_Predictor supports multiple mainstream GNSS data formats and offers flexible algorithm selection and parameter configuration. It is suitable for time series analysis tasks in fields such as <strong>crustal deformation monitoring and meteorological prediction</strong>.</p>
+
+    <h2>1.2 Main Functions</h2>
+    <ul>
+        <li><strong>Multi-source Data Support</strong>: Compatible with mainstream GNSS time series data formats including PBO, NGL, and CEA.</li>
+        <li><strong>Data Quality Control</strong>: Integrates missing value imputation, outlier detection, step error correction, and Common-Mode Error (CME) extraction.</li>
+        <li><strong>Adaptive Signal Decomposition</strong>: Provides various empirical mode decomposition and variational mode decomposition algorithms to separate different components in the signal.</li>
+        <li><strong>Nonlinear Predictive Modeling</strong>: Supports a variety of machine learning and deep learning algorithms, and enables networked prediction combined with spatial information.</li>
+        <li><strong>Comprehensive Model Evaluation</strong>: Automatically calculates multiple evaluation metrics and generates visual evaluation reports.</li>
+    </ul>
+
+    <hr>
+
+    <!-- 2. Software Environment and Installation -->
+    <h1>2. Software Environment and Installation</h1>
+    <ul>
+        <li><strong>Operating System</strong>: Windows 10/11, Linux (Ubuntu 20.04 or later), macOS (11 or later)</li>
+        <li><strong>Hardware Requirements</strong>: At least 8GB RAM is recommended. For deep learning model training, hardware with an NVIDIA GPU is recommended.</li>
+       </ul>
+
+    <hr>
+
+    <!-- 3. Data Module -->
+    <h1>3. Data Module</h1>
+    <h2>3.1 Function Description</h2>
+    <p>This module is responsible for importing raw GNSS time series data, standardizing formats, and preliminary visualization, providing a unified data foundation for subsequent analysis.</p>
+
+    <h2>3.2 Operation Guide</h2>
+    <h3>Data Import</h3>
+    <ul>
+        <li>Operation: On the main interface of the software, click the <strong>Input File</strong> button.</li>
+        <li>Supported Formats: In the pop-up file selection dialog, select local files in PBO, NGL, or CEA format.</li>
+    </ul>
+
+    <h3>Format Standardization and Visualization</h3>
+    <ul>
+        <li>Automatic Processing: The software automatically recognizes the source data format and converts it into a unified internal standardized structure.</li>
+        <li>Visualization: After successful data loading, the main plotting area automatically generates a time series trend chart. </li>
+    </ul>
+
+    <h3>Data Output</h3>
+    <ul>
+        <li>Operation: Click the <strong>Save Standardized Data</strong> button.</li>
+        <li>Output Format: Data will be saved as a CSV (Comma-Separated Values) file. You can customize the save path and filename in the pop-up dialog.</li>
+    </ul>
+
+    <hr>
+
+    <!-- 4. Preprocessing Module (Optional) -->
+    <h1>4. Preprocessing Module (Optional)</h1>
+    <h2>4.1 Function Description</h2>
+    <p>This module performs quality control on standardized data, including filling data gaps, detecting and correcting outliers, correcting step errors, and extracting Common-Mode Errors (CME). It aims to improve data quality and provide more reliable input for subsequent modeling.</p>
+
+    <h2>4.2 Operation Guide</h2>
+    <h3>Activate the Module</h3>
+    <ul>
+        <li>On the main interface, check the option <strong>Run gCMEbox Preprocessing</strong>. The parameter panel on the right will expand to show preprocessing configuration items.</li>
+        <li>Note: gCMEbox is a MATLAB toolbox for extracting and analyzing common-mode errors from GNSS time series. The core algorithm is detailed in: Zhang, S., et al. (2025). gCMEbox: A MATLAB toolbox for extracting and analyzing common-mode errors from GNSS time series. <em>Advances in Space Research</em>, 75(1), 497–514. The toolbox code has been integrated into this software. The original project URL: <a href="https://github.com/lj-lijun/GNSS_time_series_CME_software">https://github.com/lj-lijun/GNSS_time_series_CME_software</a></li>
+    </ul>
+
+    <h3>Parameter Configuration and Execution</h3>
+    <ol>
+        <li><strong>Missing Value Imputation (KKF)</strong>: The software uses the Kriging-Kalman Filter (KKF) algorithm to impute missing data in the time series.</li>
+        <li><strong>Outlier Detection (IQR)</strong>: Automatically identifies and marks outliers based on the Interquartile Range (IQR) criterion. Marked outliers are replaced with reasonable interpolated values. You can click <strong>View Outlier Report</strong> to check detailed locations after processing.</li>
+        <li><strong>Step Error Correction</strong>: The system automatically detects and corrects step errors caused by instrument changes, earthquakes, and other events.</li>
+        <li><strong>Common-Mode Error Extraction (CME)</strong>: The software applies the algorithm in gCMEbox to extract common-mode errors from multi-station data and removes them from the original signal to enhance regional characteristic signals.</li>
+    </ol>
+
+    <h3>Data Output</h3>
+    <ul>
+        <li>After preprocessing, click <strong>Save Preprocessed Data</strong>. Data will be saved in CSV format; you can customize the save path.</li>
+    </ul>
+
+    <hr>
+
+    <!-- 5. Decomposition Module (Optional) -->
+    <h1>5. Decomposition Module (Optional)</h1>
+    <h2>5.1 Function Description</h2>
+    <p>This module provides a variety of adaptive signal decomposition algorithms to decompose complex GNSS time series into components of different frequencies (e.g., trend, periodic, noise components). It can selectively filter high-frequency noise to simplify subsequent modeling and analysis.</p>
+
+    <h2>5.2 Operation Guide</h2>
+    <h3>Activate the Module</h3>
+    <ul>
+        <li>On the main interface, check <strong>Enable Decomposition Module</strong> to enter the algorithm selection and parameter configuration interface.</li>
+    </ul>
+
+    <h3>Select Decomposition Algorithm and Configure Parameters</h3>
+    <p>Select a decomposition method from the <strong>Algorithm</strong> dropdown menu. Based on the selected algorithm, the parameter table below becomes editable. Detailed parameter descriptions are as follows:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Algorithm</th>
+                <th>Parameters</th>
+                <th>Description & Recommendations</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>EMD</td>
+                <td>None</td>
+                <td>Empirical Mode Decomposition, fully adaptive, no parameters required.</td>
+            </tr>
+            <tr>
+                <td>EEMD</td>
+                <td>Nstd: Noise intensity<br>NE: Ensemble number</td>
+                <td>Ensemble Empirical Mode Decomposition.<br>Nstd (default 0.2), NE (default 200).<br>Increasing NE reduces noise residue but increases computation time.</td>
+            </tr>
+            <tr>
+                <td>CEEMDAN</td>
+                <td>Nstd: Noise intensity<br>NR: Reconstruction number<br>MaxIter: Max iterations</td>
+                <td>Complete Ensemble Empirical Mode Decomposition with Adaptive Noise.<br>NR (default 10), MaxIter (default 10).<br>Higher decomposition accuracy than EEMD.</td>
+            </tr>
+            <tr>
+                <td>ICEEMDAN</td>
+                <td>Nstd: Noise intensity<br>NR: Reconstruction number<br>MaxIter: Max iterations</td>
+                <td>Improved CEEMDAN.<br>Parameters same as CEEMDAN; better performance in suppressing spurious modes and noise residue.</td>
+            </tr>
+            <tr>
+                <td>VMD</td>
+                <td>K: Number of modes<br>alpha: Penalty factor<br>tol: Convergence tolerance</td>
+                <td>Variational Mode Decomposition.<br>K (default 5, recommended 3–8), alpha (default 15000), tol (default 1e-6).<br>VMD requires predefining the number of modes K.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Noise Reduction</h3>
+    <ul>
+        <li>Check the option <strong>Denoise: Remove the first IMF component</strong>. The software automatically identifies and removes the first Intrinsic Mode Function representing the highest-frequency noise, retaining other valid low- and mid-frequency components.</li>
+    </ul>
+
+    <h3>Data Output</h3>
+    <ul>
+        <li>Click <strong>Export Decomposition Results</strong>.  Each decomposed component (IMF) is saved as a separate CSV file, with the filename containing the algorithm name and component index.</li>
+    </ul>
+
+    <hr>
+
+    <!-- 6. Nonlinear Modeling and Prediction Module -->
+    <h1>6. Nonlinear Modeling and Prediction Module</h1>
+    <h2>6.1 Function Description</h2>
+    <p>This is the core module of the software. It provides various machine learning and deep learning algorithms and supports enhancing prediction performance using station spatial information. Users can build GNSS time series prediction models suitable for different complexities through flexible parameter configuration.</p>
+
+    <h2>6.2 Operation Guide</h2>
+    <h3>Spatial Network Estimation (Optional)</h3>
+    <ul>
+        <li>When processing multi-station data, check <strong>Enable Spatial Network Prediction Model</strong>. The software constructs a spatial weight matrix based on the geographic coordinates of stations and integrates spatial correlation information into the prediction model to improve accuracy.</li>
+    </ul>
+
+    <h3>Select Algorithm and Configure Parameters</h3>
+    <p>In <strong>Model Type</strong>, select <strong>Machine Learning</strong> or <strong>Deep Learning</strong>, then choose a specific algorithm from the submenu. The parameter table below loads configurable items for the corresponding algorithm.</p>
+
+    <h4>Machine Learning Algorithms (SVM, RBF, ELM)</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>Parameter</th>
+                <th>Description & Recommendations</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Training/Testing Split</td>
+                <td>Default 0.7. Recommended range: 0.7–0.9.</td>
+            </tr>
+            <tr>
+                <td>Window Size</td>
+                <td>Default 15. Historical time steps used for prediction; adjust according to data sampling rate.</td>
+            </tr>
+            <tr>
+                <td>Hidden Layer Nodes (ELM)</td>
+                <td>Default 30. Recommended range: 30–100.</td>
+            </tr>
+            <tr>
+                <td>Expansion Coefficient (RBF)</td>
+                <td>Default 1000. Affects the shape of radial basis functions.</td>
+            </tr>
+            <tr>
+                <td>Penalty Coefficient C (SVM)</td>
+                <td>Default 4. Controls penalty for model errors.</td>
+            </tr>
+            <tr>
+                <td>Kernel Coefficient Gamma (SVM)</td>
+                <td>Default 0.001. Affects the influence range of a single sample.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4>Deep Learning Algorithms (BP, LSTM, GRU)</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>Parameter</th>
+                <th>Description & Recommendations</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Training/Testing Split</td>
+                <td>Default 0.7.</td>
+            </tr>
+            <tr>
+                <td>Learning Rate</td>
+                <td>Default 0.01. Recommended range: 0.0001–0.01.</td>
+            </tr>
+            <tr>
+                <td>Epochs</td>
+                <td>Default 50. Recommended range: 50–200.</td>
+            </tr>
+            <tr>
+                <td>Window Size</td>
+                <td>Default 15. Recommended to match the main period of the data (daily, weekly, monthly).</td>
+            </tr>
+            <tr>
+                <td>Batch Size</td>
+                <td>Default 128. Recommended range: 16–256; adjust based on hardware memory.</td>
+            </tr>
+            <tr>
+                <td>Hidden Layer Nodes</td>
+                <td>Default 30. Recommended range: 16–128.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Training and Prediction</h3>
+    <ul>
+        <li>After parameter configuration, click the <strong>Run</strong> button.</li>
+        <li>The software automatically loads preprocessed or decomposed data and trains the model according to the set parameters. During training, the status bar at the bottom of the interface shows the training progress.</li>
+        <li>After training completes, the software automatically uses the trained model to predict future data for the specified steps.</li>
+    </ul>
+
+    <hr>
+
+    <!-- 7. Evaluation Module -->
+    <h1>7. Evaluation Module</h1>
+    <h2>7.1 Function Description</h2>
+    <p>This module starts automatically after model prediction. It comprehensively evaluates model performance using multiple quantitative indicators and generates standardized evaluation reports for result analysis and model comparison.</p>
+
+    <h2>7.2 Operation Guide</h2>
+    <h3>Automatic Evaluation</h3>
+    <p>After prediction, the evaluation module runs automatically and calculates the following core metrics:</p>
+    <ul>
+        <li><strong>RMSE (Root Mean Squared Error)</strong>: Measures the deviation between predicted and true values; sensitive to large errors. Smaller value = higher accuracy.</li>
+        <li><strong>MAE (Mean Absolute Error)</strong>: Measures the average magnitude of prediction error; robust to outliers. Smaller value = better performance.</li>
+        <li><strong>sMAPE (Symmetric Mean Absolute Percentage Error)</strong>: Dimensionless error metric for comparing model performance across datasets.</li>
+        <li><strong>R² (Coefficient of Determination)</strong>: Reflects the goodness of fit of the model to observations. Closer to 1 = stronger explanatory power.</li>
+        <li><strong>WQE (Weighted Quality Evaluation)</strong>: A comprehensive score calculated by weighting the above indicators, used for quick overall model assessment.</li>
+    </ul>
+
+    <h3>Result Output and Viewing</h3>
+    <ul>
+        <li>After evaluation, click <strong>Export Evaluation Report</strong>.</li>
+        <li>The report is saved as an Excel workbook (*.xlsx) in the <code>Data/Results/</code> folder by default, including:</li>
+        <ul>
+            <li><strong>“Metrics” Worksheet</strong>: Values of all evaluation indicators listed above.</li>
+            <li><strong>“Data” Worksheet</strong>: Original true values, model predicted values, and residual values.</li>
+            <li><strong>“Charts” Worksheet</strong>: Visual results including predicted vs. true value curves and error distribution histograms.</li>
+        </ul>
+    </ul>
+</body>
+</html>

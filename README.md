@@ -10,7 +10,6 @@
 
 TS_Predictor is an open-source MATLAB toolbox for predicting Global Navigation Satellite System (GNSS) coordinate time series. It integrates signal decomposition methods with machine learning and deep learning models, providing a complete workflow from raw data preprocessing to prediction accuracy assessment.
 
-![TS_Predictor Main Interface](docs/images/main_interface.png)
 
 ## Key Features
 

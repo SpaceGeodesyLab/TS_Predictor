@@ -1,6 +1,6 @@
 # TS_Predictor
 
-**A user-friendly GNSS Time Series Prediction toolbox combining Deep Learning and Signal Decomposition**
+**TS_Predictor: A Deep Learning Toolbox for GNSS Time Series Prediction with Signal Decomposition and Nonlinear Modelling**
 
 [![MATLAB](https://img.shields.io/badge/MATLAB-2024b-orange.svg)](https://www.mathworks.com/products/matlab.html)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

@@ -1,4 +1,4 @@
-# TS_Predictor
+# TS_Predictor V1.0
 
 **TS_Predictor: A Deep Learning Toolbox for GNSS Time Series Prediction with Signal Decomposition and Nonlinear Modelling**
 

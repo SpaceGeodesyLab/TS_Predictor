@@ -1,9 +1,10 @@
 # TS_Predictor V1.0
 
-**TS_Predictor: A Deep Learning Toolbox for GNSS Time Series Prediction with Signal Decomposition and Nonlinear Modelling**
+# TS_Predictor: A Deep Learning Toolbox for GNSS Time Series Prediction with Signal Decomposition and Nonlinear Modelling**
 
-**For software usage issues
+# For software usage issues
 Please contact：6720230184@mail.jxust.edu.cn (Yu Zhou) and 2452481248@qq.com (Jun Li).
+
 ## How to cite
 
 If you find the TS_Predictor program is useful, please cite it in your work as:

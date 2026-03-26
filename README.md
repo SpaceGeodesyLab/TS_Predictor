@@ -159,8 +159,7 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 ## Support
 
 - **Issues**: [GitHub Issues](https://github.com/SpaceGeodesyLab/TS_Predictor/issues)
-- **Email**: xxh@jxust.edu.cn
 
 ---
 
-**SpaceGeodesyLab** | Jiangxi University of Science and Technology
+**SpaceGeodesyLab/时空智能与对地观测** | Jiangxi University of Science and Technology/江西理工大学

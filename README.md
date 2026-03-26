@@ -133,20 +133,6 @@ TS_Predictor/
 - [Hector](http://segal.ubi.pt/hector/) - GNSS time series noise analysis
 - [TSAnalyzer](https://github.com/yxw027/TSAnalyzer) - GNSS time series analysis
 
-## Authors
-
-- **Xiaoxing He** - Jiangxi University of Science and Technology - xxh@jxust.edu.cn
-- **Yu Zhou** - Jiangxi University of Science and Technology
-- **Jun Li** - Chang'an University
-- **Gaël Kermarrec** - Leibniz University Hannover
-- **Rui Fernandes** - University of Beira Interior
-- **Jean-Philippe Montillet** - University of Beira Interior
-
-## Acknowledgments
-
-This work was supported by:
-- National Natural Science Foundation China (42364002, 42474028)
-- Natural Science Foundation of Jiangxi (20252BAC220015, 20252BAC200264)
 
 ## License
 

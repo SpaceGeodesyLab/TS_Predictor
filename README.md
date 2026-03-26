@@ -3,6 +3,7 @@
 Please contact：6720230184@mail.jxust.edu.cn (Yu Zhou) and 2452481248@qq.com (Jun Li).
 ## How to cite
 If you find the TS_Predictor program is useful, please cite it in your work as:
+
 [1] TS_Predictor: A Deep Learning Toolbox for GNSS Time Series Prediction with Signal Decomposition and Nonlinear Modelling. (Appear soon, see https://authors.elsevier.com/tracking/article/details.do?aid=19477&jid=JASR&surname=He)
 
 [2]Zhang, S., Li, J., Zhao, L., Zeng, A., Ming, F., Liu, N., Chen, X., Feng, Z. and Wang, H., 2025. gCMEbox: A MATLAB toolbox for extracting and analyzing common-mode errors from GNSS time series. Advances in Space Research, 75(1), pp.497-514.  

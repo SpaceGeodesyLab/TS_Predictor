@@ -2,9 +2,14 @@
 
 **TS_Predictor: A Deep Learning Toolbox for GNSS Time Series Prediction with Signal Decomposition and Nonlinear Modelling**
 
-[![MATLAB](https://img.shields.io/badge/MATLAB-2024b-orange.svg)](https://www.mathworks.com/products/matlab.html)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/SpaceGeodesyLab/TS_Predictor.svg)](https://github.com/SpaceGeodesyLab/TS_Predictor/stargazers)
+**For software usage issues
+Please contact：6720230184@mail.jxust.edu.cn (Yu Zhou) and 2452481248@qq.com (Jun Li).
+## How to cite
+
+If you find the TS_Predictor program is useful, please cite it in your work as:
+[1] TS_Predictor: A Deep Learning Toolbox for GNSS Time Series Prediction with Signal Decomposition and Nonlinear Modelling. (Appear soon, see https://authors.elsevier.com/tracking/article/details.do?aid=19477&jid=JASR&surname=He)
+[2]Zhang, S., Li, J., Zhao, L., Zeng, A., Ming, F., Liu, N., Chen, X., Feng, Z. and Wang, H., 2025. gCMEbox: A MATLAB toolbox for extracting and analyzing common-mode errors from GNSS time series. Advances in Space Research, 75(1), pp.497-514.  
+[3] Zhou, Y., He, X., Montillet, J.P., Wang, S., Hu, S., Sun, X., Huang, J. and Ma, X., 2025. An improved ICEEMDAN-MPA-GRU model for GNSS height time series prediction with weighted quality evaluation index. Gps Solutions, 29(3), p.113.  
 
 ## Overview
 
@@ -127,19 +132,6 @@ TS_Predictor/
 └── README.md              # This file
 ```
 
-## Citation
-
-If you use TS_Predictor in your research, please cite:
-
-```bibtex
-@article{he2025ts_predictor,
-  title={TS_Predictor: An Open-Source Toolbox for GNSS Time Series Prediction Combining Deep Learning and Signal Decomposition},
-  author={He, Xiaoxing and Zhou, Yu and Li, Jun and Kermarrec, Ga{\"e}l and Fernandes, Rui and Montillet, Jean-Philippe},
-  journal={SoftwareX},
-  year={2025},
-  note={Submitted}
-}
-```
 
 ## Related Software
 

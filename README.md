@@ -12,7 +12,7 @@ If you find the TS_Predictor program is useful, please cite it in your work as:
 
 [4] Hu, S., Chen, K., He, X., Zhu, H., & Wang, T. (2025). Research on the impact of environmental loading on nonlinear variations of 3D coordinate time series of GNSS stations in Sichuan and Yunnan region. Acta Geodaetica et Cartographica Sinica, 54, 805-818. (胡顺强,陈克杰,贺小星,等. 环境负载对川滇地区GNSS观测站三维坐标时间序列非线性变化的影响 [J]. 测绘学报, 2025, 54 (05): 805-818.)
 
-[5] He, X., Bos, M. S., Montillet, J. P., & Fernandes, R. M. S. (2019). Investigation of the noise properties at low frequencies in long GNSS time series: X. He et al. Journal of Geodesy, 93(9), 1271-1282.
+[5] He, X., Bos, M. S., Montillet, J. P., & Fernandes, R. M. S. (2019). Investigation of the noise properties at low frequencies in long GNSS time series. Journal of Geodesy, 93(9), 1271-1282.
 
 ## Overview
 TS_Predictor is an open-source MATLAB toolbox for predicting Global Navigation Satellite System (GNSS) coordinate time series. It integrates signal decomposition methods with machine learning and deep learning models, providing a complete workflow from raw data preprocessing to prediction accuracy assessment.

@@ -104,7 +104,7 @@ Results are exported to Excel for further analysis.
 - [Hector](http://segal.ubi.pt/hector/) - GNSS time series noise analysis
 - [TSAnalyzer](https://github.com/yxw027/TSAnalyzer) - GNSS time series analysis
 - ......
-- 
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.

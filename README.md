@@ -110,4 +110,4 @@ Results are exported to Excel for further analysis.
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
 
-**SpaceGeodesyLab/时空智能与对地观测** | Jiangxi University of Science and Technology/江西理工大学
+## SpaceGeodesyLab of Jiangxi University of Science and Technology/江西理工大学时空智能与对地观测团队

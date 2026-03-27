@@ -90,42 +90,13 @@ Choose a prediction model:
 **Recommended**: ICEEMDAN + GRU for most GNSS applications.
 
 ### 5. Evaluate
-
 Compare models using multiple metrics:
 - **RMSE**: Root Mean Square Error
 - **MAE**: Mean Absolute Error
 - **sMAPE**: Symmetric Mean Absolute Percentage Error
 - **R²**: Coefficient of determination
 - **WQE**: Weighted Quality Evaluation (unified metric)
-
 Results are exported to Excel for further analysis.
-
-## Example
-
-Test data from 10 GNSS stations in Yunnan, China (2010-2025) is provided in the `Test data` folder.
-
-```matlab
-% Example workflow
-% 1. Launch TS_Predictor from Apps toolbar
-% 2. Load test data from 'Test data/YNTC.csv'
-% 3. Apply preprocessing (interpolation, outlier removal)
-% 4. Decompose using ICEEMDAN (default parameters)
-% 5. Predict using GRU model
-% 6. Evaluate and export results
-```
-
-## Project Structure
-
-```
-TS_Predictor/
-├── main/                    # Core application files
-├── gCMEbox_v5/             # Preprocessing toolbox
-├── Test data/              # Example GNSS time series
-├── TS_predictor.mlappinstall   # Installation package
-├── LICENSE                 # MIT License
-└── README.md              # This file
-```
-
 
 ## Related Software
 
@@ -133,19 +104,9 @@ TS_Predictor/
 - [Hector](http://segal.ubi.pt/hector/) - GNSS time series noise analysis
 - [TSAnalyzer](https://github.com/yxw027/TSAnalyzer) - GNSS time series analysis
 
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
-## Support
-
-- **Issues**: [GitHub Issues](https://github.com/SpaceGeodesyLab/TS_Predictor/issues)
-
----
 
 **SpaceGeodesyLab/时空智能与对地观测** | Jiangxi University of Science and Technology/江西理工大学

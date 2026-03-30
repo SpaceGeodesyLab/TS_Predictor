@@ -2,7 +2,7 @@
 # For software usage issues
 Please contact：6720230184@mail.jxust.edu.cn (Yu Zhou) and 2452481248@qq.com (Jun Li).
 ## References
-- TS_Predictor: A Deep Learning Toolbox for GNSS Time Series Prediction with Signal Decomposition and Nonlinear Modelling.2026.Advances in Space Research. (Appear soon)
+- He, X., Zhou, Y., Li, J., Kermarrec, G., Fernandes, R., Montillet, J-P., Zhang, S., Hu, S., TS_Predictor: A Deep Learning Toolbox for GNSS Time Series Prediction with Signal Decomposition and Nonlinear Modelling, Advances in Space Research (2026), doi: https://doi.org/10.1016/j.asr.2026.03.083
 - Zhang, S., Li, J., Zhao, L., Zeng, A., Ming, F., Liu, N., Chen, X., Feng, Z. and Wang, H., 2025. gCMEbox: A MATLAB toolbox for extracting and analyzing common-mode errors from GNSS time series. Advances in Space Research, 75(1), pp.497-514.  
 - Zhou, Y., He, X., Montillet, J.P., Wang, S., Hu, S., Sun, X., Huang, J. and Ma, X., 2025. An improved ICEEMDAN-MPA-GRU model for GNSS height time series prediction with weighted quality evaluation index. GPS Solutions, 29(3), p.113. 
 - Hu, S., Chen, K., He, X., Zhu, H., & Wang, T. (2025). Research on the impact of environmental loading on nonlinear variations of 3D coordinate time series of GNSS stations in Sichuan and Yunnan region. Acta Geodaetica et Cartographica Sinica, 54, 805-818. (胡顺强,陈克杰,贺小星,等. 环境负载对川滇地区GNSS观测站三维坐标时间序列非线性变化的影响 [J]. 测绘学报, 2025, 54 (05): 805-818.)
